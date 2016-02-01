@@ -25,19 +25,16 @@
     "is-buffer": "^1.1.2"
   },
   "devDependencies": {
-    "faucet": "^0.0.1",
     "browserify": "^12.0.1",
-    "istanbul": "^0.4.2",
     "isuuid": "^0.1.0",
     "tape": "^4.4.0",
-    "uglify-js": "^2.6.1",
-    "tape-run": "^2.1.3"
+    "zuul": "^3.9.0"
   },
   "scripts": {
     "test": "npm run test-node && npm run test-browser",
-    "test-node": "tape test.js | faucet",
-    "test-browser": "browserify test.js | xvfb-run tape-run | faucet",
-    "build": "mkdir -p dist && browserify --standalone=uuid uuid.js > dist/uuid.js",
-    "cover": "istanbul cover tape test.js --report html"
+    "test-node": "tape test.js",
+    "test-browser": "zuul -- test.js",
+    "test-browser-local": "zuul --local -- test.js",
+    "build": "mkdir -p dist && browserify --standalone=uuid uuid.js > dist/uuid.js"
   }
 }
