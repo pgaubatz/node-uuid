@@ -1,7 +1,7 @@
 {
   "name": "@pgaubatz/uuid",
   "version": "0.1.0",
-  "description": "",
+  "description": "Create, parse and unparse RFC 4122 v4 UUIDs",
   "keywords": [
     "guid",
     "rfc4122",
