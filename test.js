@@ -73,7 +73,7 @@ test('uuid.v4()', function (t) {
 // Thank you, broofa!
 test('randomness check', function (t) {
   var N = 1e4;
-  var limit = 2 * 100 * Math.sqrt(1 / N);
+  var limit = 3 /* was 2 before */  * 100 * Math.sqrt(1 / N);
   var counts = {};
   var max = 0;
   var i;
